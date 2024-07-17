@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>ESP Web Server</title>
+    <link rel="icon" href="data:,">
+    <style type="text/css">
+        #action {
+            background:yellow;
+            border:0px solid #555;
+            color:#555;
+            width:0px;
+            height:0px;
+            padding:0px;
+        }
+
+        html{font-family: Helvetica; display:inline-block; margin: 0px auto; text-align: center;}
+        h1{color: #0F3376; padding: 2vh;}p{font-size: 1.5rem;}
+    </style>
+    <script>
+        function AddText(text)
+        {
+            document.myform.action.value=text;
+        }
+    </script>
+</head>
+<body>
+<h1>ESP Web Server</h1>
+<form name="myform" method="get">
+    <textarea id="action" name="action">start</textarea>
+    <input id="button1" type="submit" value="Stop"  OnClick='javascript:AddText ("stop")' style="height:80px; width:120px" />
+    <input id="button2" type="submit" value="↑" OnClick='javascript:AddText ("start")' style="height:80px; width:120px" />
+    <input id="button3" type="submit" value="↓"  OnClick='javascript:AddText ("back")' style="height:80px; width:120px" />
+    <input id="button4" type="submit" value="←"  OnClick='javascript:AddText ("left")' style="height:80px; width:120px" />
+    <input id="button5" type="submit" value="→" OnClick='javascript:AddText ("right")' style="height:80px; width:120px" />
+    <input id="button6" type="submit" value="Mode" OnClick='javascript:AddText ("mode")' style="height:80px; width:120px" />
+</form>
+</body>
+</html>
